@@ -1,33 +1,136 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.panel {
+  width: 50%;
+  height: 400px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #e9e8e8;
+  border-radius: 4px;
+}
+.col-left {
+  width: 200px;
+  height: 100%;
+  padding: 20px;
+  background-color: #e8e8e8;
+}
+.col-left .section{
+  padding-top: 40px;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.col-right {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #f7f7f7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.col-right form {
+  display: flex;
+  flex-direction: row;
+}
+.col-right .searchbar {
+  width: 80%;
+  height: 40px;
+  background-color: #FFF;
+  border: 1px solid #dddcdc;
+  border-radius: 4px;
+}
+.col-right .searchbar:hover{
+  border: 1px solid #c03;
+}
+
+.col-right .searchbar input {
+  width: 90%;
+  height: 100%;
+  border: none;
+  margin-left: 5px;
+  padding-left: 10px;
+}
+
+.col-right .searchbutton {
+  width: 90px;
+  height: 40px;
+  background-color: #c03;
+  color: #FFF;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+.col-right .searchbutton:hover {
+  background: transparent;
+  border: 1.5px solid #c03;
+  color: #c03;
+}
+
+.col-right .error{
+  height: auto;
+  padding: 10px 0;
+  font-size: 14px;
+  text-align: center;
+  color: red;
+}
+
+.col-right .info {
+  height: auto;
+  margin-top: 10px;
+} 
+
+.info h1 {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info h1 span {
+  margin-left: 10px;
+  font-weight: 300;
+}
+
+.weather-state {
+  margin-top: 30px;
+}
+
+.weather-state h1 {
+  font-size: 14px;
+}
+
+.weather-state .title {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.weather-state .value {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #999;
+}
+.weather-state .value span {
+  margin-left: 10px;
 }
